@@ -1,6 +1,5 @@
 .img {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
 }
 
@@ -16,5 +15,4 @@ body {
 
 .text {
   column-count: 3;
-
 }
