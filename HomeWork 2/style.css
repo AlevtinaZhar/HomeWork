@@ -1,0 +1,20 @@
+.img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+body {
+  padding: 50px 0;
+  color: #333;
+
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+.text {
+  column-count: 3;
+
+}
