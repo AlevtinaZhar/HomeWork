@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    /* страшненький вариант 0
+    Разделитель сделан через свойство content. Строки расположены через inline-block.
+    Недостаток - разделитель через content нельзя редактировать
+     */
+    div.var0 ul a {
+        color: green;
+
+    }
+
+    div.var0 li {
+        display: inline-block;
+
+    }
+
+    li::after {
+        content: "|";
+        color: #ff0202;
+    }
+
+    li:last-child::after {
+        content: "";
+    }
+
+    div.var0 li a:hover {
+        color: red;
+    }
+
+
+    /* 1 вариант (простой вариант)
+    Разделитель border-right, строка - display: inline-block
+    */
+    div.var1 p {
+        display: inline-block;
+        padding: 5px;
+        border-right: 3px solid #ff0000;
+    }
+
+    div.var1 p:last-child {
+        border: none;
+    }
+
+    div.var1 a {
+        color: green;
+    }
+
+    div.var1 a:hover {
+        color: red;
+    }
+
+    /* 2 вариант
+    Разделитель сделан через иерархию ("а" - дочерний селектор
+    "td"). Строки сделаны горизонтально, так как это строка таблицы
+    (дополнительный код не понадобился)
+    */
+    div.var2 td a {
+        padding: 4px;
+        color: green;
+        border-right: 3px solid #ff0000;
+    }
+
+    div.var2 td:last-child a {
+        border-right: none;
+    }
+
+    div.var2 a:hover {
+        color: red;
+    }
+
+    /* вариант 3 
+    Разделитель сделан через :not(:last-of-type). Горизонтальное
+    выравнивание сделано через float.
+    "-" - так как был использован float следующий текст после ссылок
+    поедет и придется дополнительно закреплять элементы */
+    div.href:not(:last-of-type) a {
+        border-right: 3px solid red;
+    }
+
+    div.href a {
+        color: green;
+        float: left;
+        padding: 5px;
+        margin-top: 4px;
+    }
+
+    div.href:hover a {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="var0">
+        <ul>
+            <li><a href="">первая ссылка</a></li>
+            <li><a href="">вторая ссылка</a></li>
+            <li><a href="">третья ссылка</a></li>
+            <li><a href="">четвертая ссылка</a></li>
+            <li><a href="">пятая ссылка</a></li>
+        </ul>
+    </div>
+
+    <div class="var1">
+        <p><a href="#">первая ссылка</a></p>
+        <p><a href="#">вторая ссылка</a></p>
+        <p><a href="#">третья ссылка</a></p>
+        <p><a href="#">четвертая ссылка</a></p>
+        <p><a href="#">пятая ссылка</a></p>
+    </div>
+
+    <div class="var2">
+        <table>
+            <tr>
+                <td><a href="#">первая ссылка</a></td>
+                <td><a href="#">вторая ссылка</a></td>
+                <td><a href="#">третья ссылка</a></td>
+                <td><a href="#">четвертая ссылка</a></td>
+                <td><a href="#">пятая ссылка</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="var3">
+        <div class="href"><a href="">первая ссылка</a></div>
+        <div class="href"><a href="">вторая ссылка</a></div>
+        <div class="href"><a href="">третья ссылка</a></div>
+        <div class="href"><a href="">четвертая ссылка</a></div>
+        <div class="href"><a href="">пятая ссылка</a></div>
+    </div>
+
+
+</body>
+
+</html>
