@@ -1,0 +1,39 @@
+@media screen and (max-width:800px) {
+    .block {
+        flex-flow: column wrap;
+    }
+
+
+    .imgHead {
+        display: none;
+    }
+
+    .header {
+        font-size: 75%;
+        background-image: url(img/backAdapt.jpg);
+    }
+
+    div.leftMenu {
+        order: 2;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    div.content {
+        order: 1;
+        width: 100%;
+
+    }
+
+    div .img {
+        width: 100px;
+
+    }
+
+    div .imgMenu {
+        width: 30%;
+        display: block;
+    }
+
+
+}

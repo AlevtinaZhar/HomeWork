@@ -1,0 +1,71 @@
+@import "potter-media.css";
+
+.block {
+    display: flex;
+}
+
+.header {
+    font-family: oswald;
+    text-align: center;
+    display: block;
+}
+
+.back {
+    background: url(img/back.jpg) no-repeat bottom;
+    background-size: 100%;
+    background-color: #b5b3c9
+}
+
+.content {
+    order: 2;
+    font-family: pt sans narrow;
+    width: 100%;
+    text-indent: 3%;
+    text-align: justify;
+    font-size: larger;
+    float: right;
+    
+}
+
+.leftMenu {
+    order: 1;
+    float: left;
+    width: 20%;
+    margin: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    background-color: rgba(221, 219, 240, 0.774);
+    font-size: small;
+
+}
+
+p:first-letter {
+    color: red;
+}
+
+.span1 {
+    background: rgba(222, 184, 135, 0.487);
+}
+
+.span2 {
+    background: rgba(224, 71, 104, 0.487);
+}
+
+.span3 {
+    background: rgba(113, 107, 99, 0.487);
+}
+
+.img {
+    float: left;
+    margin: 5px;
+    width: 170px;
+}
+
+.imgMenu {
+    width: 50px;
+    vertical-align: middle;
+}
+
+.imgMenu p {
+    vertical-align: middle;
+}
