@@ -1,8 +1,5 @@
 @import "potter-media.css";
 
-.block {
-    display: flex;
-}
 
 .header {
     font-family: oswald;
@@ -15,18 +12,6 @@
     background-size: 100%;
     background-color: #b5b3c9
 }
-
-.content {
-    order: 2;
-    font-family: pt sans narrow;
-    width: 100%;
-    text-indent: 3%;
-    text-align: justify;
-    font-size: larger;
-    float: right;
-    
-}
-
 .leftMenu {
     order: 1;
     float: left;
@@ -38,6 +23,18 @@
     font-size: small;
 
 }
+.content {
+    order: 2;
+    font-family: pt sans narrow;
+    width: 77%;
+    text-indent: 3%;
+    text-align: justify;
+    font-size: larger;
+    float: right;
+    
+}
+
+
 
 p:first-letter {
     color: red;

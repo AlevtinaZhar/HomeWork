@@ -1,9 +1,5 @@
 @media screen and (max-width:800px) {
-    .block {
-        flex-flow: column wrap;
-    }
-
-
+ 
     .imgHead {
         display: none;
     }
@@ -14,13 +10,11 @@
     }
 
     div.leftMenu {
-        order: 2;
         width: 100%;
         font-size: 20px;
     }
 
     div.content {
-        order: 1;
         width: 100%;
 
     }
