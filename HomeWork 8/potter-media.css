@@ -1,5 +1,5 @@
 @media screen and (max-width:800px) {
- 
+
     .imgHead {
         display: none;
     }
@@ -9,9 +9,21 @@
         background-image: url(img/backAdapt.jpg);
     }
 
+    div.hero {
+        width: 30%;
+        display: inline-block;
+        font-size: 25px;
+    }
+
     div.leftMenu {
         width: 100%;
         font-size: 20px;
+        text-align: center;
+    }
+
+    div.leftMenu ol {
+        text-align: left;
+        padding: 5px 70px 0px 70px;
     }
 
     div.content {
@@ -25,9 +37,17 @@
     }
 
     div .imgMenu {
-        width: 30%;
-        display: block;
+        width: 74%;
     }
 
 
+}
+
+@media screen and (max-width:600px) {
+    div.hero {
+        font-size: 15px;
+    }
+    div.leftMenu {
+        font-size: 15px;
+    }
 }
