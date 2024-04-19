@@ -1,0 +1,32 @@
+@import url(MAKET_FORM-media.css);
+
+label {
+    width: 180px;
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.listRubrika {
+    display: inline-block;
+}
+
+.public br {
+    display: none;
+}
+
+.public {
+    display: inline;
+}
+
+textarea {
+    width: 95%;
+}
+
+input[type="name"] {
+    width: 77%;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin: 0;
+}

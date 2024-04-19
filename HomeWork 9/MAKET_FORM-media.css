@@ -1,0 +1,24 @@
+@media screen and (max-width:1000px) {
+    div.public, div.listRubrika{
+        display: block;
+    }
+     div.listRubrika br{
+        display: none;
+    }
+    .form input[type="name"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    div.public br {
+        display: block;
+    }
+
+    .form textarea {
+        width: 100%;
+    }
+
+
+
+
+}

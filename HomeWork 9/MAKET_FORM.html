@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="MAKET_FORM.css">
+
+<body>
+    <h2>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</h2>
+    <fieldset>
+        <div class="form">
+            <form action="https://fe.it-academy.by/TestForm.php" method="post">
+
+                <label for="name">Название статьи:</label>
+
+                <input type="name" name="text" id="" placeholder="Название статьи">
+                <br><label for="list">Рубрика:</label>
+
+                <div class="listRubrika">
+                    <select name="list" size="1">
+                        <option value="programm" selected>Программирование</option>
+                        <option value="science">Наука</option>
+                        <option value="lit">Литература</option>
+                        <option value="science fiction">Научная фантастика</option>
+                    </select>
+                </div><br>
+
+                <label for="radio">Публикация:</label>
+                <div class="public">
+                    <input type="radio" name="preferences" id="">на сайте<br>
+                    <input type="radio" name="preferences" id="">в журнале<br>
+                    <input type="radio" name="preferences" id="">на сайте и в журнале<br>
+                </div>
+                <br>
+                <div class="checkbox">
+                    <label for="agree"> Разрешить комментарии</label>
+                    <input type="checkbox" name="agree" checked><br>
+                </div><label for="comment">
+                    Текст статьи:
+                </label>
+                <textarea name="comment" placeholder="..."></textarea>
+                <br>
+                <button type="submit">
+                    Опубликовать
+                    &#9989;
+                </button>
+        </div>
+    </fieldset>
+</body>
+
+</html>
