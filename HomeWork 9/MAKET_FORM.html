@@ -14,9 +14,14 @@
         <div class="form">
             <form action="https://fe.it-academy.by/TestForm.php" method="post">
 
-                <label for="name">Название статьи:</label>
+                <div class="name">
+                    <label for="name">Название статьи:</label>
+                </div>
+                <div class="nametext" >
+                    <input type="name" style='width: 100%' name="text" id="" placeholder="Название статьи">
+                </div>
 
-                <input type="name" name="text" id="" placeholder="Название статьи">
+
                 <br><label for="list">Рубрика:</label>
 
                 <div class="listRubrika">
@@ -38,10 +43,13 @@
                 <div class="checkbox">
                     <label for="agree"> Разрешить комментарии</label>
                     <input type="checkbox" name="agree" checked><br>
-                </div><label for="comment">
-                    Текст статьи:
-                </label>
-                <textarea name="comment" placeholder="..."></textarea>
+                </div>
+                <div class="text">
+                    <label for="comment">
+                        Текст статьи:
+                    </label>
+                    <textarea name="comment"  placeholder="..."></textarea>
+                </div>
                 <br>
                 <button type="submit">
                     Опубликовать

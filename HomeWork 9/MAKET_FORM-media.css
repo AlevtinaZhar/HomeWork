@@ -1,24 +1,30 @@
 @media screen and (max-width:1000px) {
-    div.public, div.listRubrika{
+
+    div.public,
+    div.listRubrika {
         display: block;
     }
-     div.listRubrika br{
+
+    div.listRubrika br {
         display: none;
-    }
-    .form input[type="name"] {
-        width: 100%;
-        box-sizing: border-box;
     }
 
     div.public br {
         display: block;
     }
-
+    br {
+        display: none;
+    }
     .form textarea {
         width: 100%;
     }
 
+    div.nametext {
+        margin-left: 0;
+    }
 
-
-
+    div.name label {
+        float: none;
+    }
+    
 }

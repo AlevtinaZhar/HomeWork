@@ -19,14 +19,17 @@ label {
 }
 
 textarea {
-    width: 95%;
-}
-
-input[type="name"] {
-    width: 77%;
-    box-sizing: border-box;
+    width: 100%;
 }
 
 input[type="checkbox"] {
     margin: 0;
+}
+
+.name label {
+    float: left;
+    width: 8em;
+}
+.nametext {
+    margin-left: 11.4em
 }
