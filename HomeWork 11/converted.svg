@@ -1,0 +1,6 @@
+<svg width="15" height="15" transform="rotate(45) translate(10 -10)">
+<symbol id="romb">
+<rect x="0" y="0" width="20px" height="20px" fill="white" />
+</symbol>
+<use xlink:href="#romb" />
+</svg>п

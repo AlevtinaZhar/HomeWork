@@ -1,0 +1,98 @@
+@import url(media-concert.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway;
+}
+
+.header,
+.footer {
+    position: fixed;
+    height: 45px;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    text-align: center;
+    padding: 20px 30px 10px 5px
+}
+
+.header {
+    top: 0em;
+}
+
+.title2 a {
+    float: right;
+    text-decoration: none;
+    padding-right: 35px;
+    color: white;
+    font-size: 1em;
+}
+
+.title1 {
+    float: left;
+}
+
+.footer {
+    bottom: 0em;
+    padding: 15px;
+}
+
+footer .svg {
+    float: left;
+    width: 3em;
+    margin-left: 3em;
+}
+.footer ul {
+    float: right;
+    font-size: 0.9em;
+    text-align: left;
+    margin-top: 0px;
+    padding-right: 60px;
+}
+
+.footer li {
+    list-style-type: none;
+}
+
+.svg {
+    width: 2em;
+    fill: white;
+    vertical-align: middle;
+}
+
+.block-1 {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.block-2 {
+    margin-bottom: 80px;
+    margin-left: 50px;
+
+}
+
+.block-2 td {
+    background-color: rgb(182, 182, 182);
+    width: 1220px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 2em;
+    color: rgb(36, 36, 36);
+    padding-right: 10px;
+}
+
+img {
+    float: left;
+    margin: 0 0 0 20px;
+    width: 250px;
+}
+
+.info {
+    font-size: 0.5em;
+    margin: 20px;
+}
+
+.info span {
+    padding-right: 40px;
+}

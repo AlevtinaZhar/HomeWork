@@ -1,0 +1,48 @@
+@media screen and (max-width:500px) {
+    footer div.footer ul{
+        position: relative;
+         float: none;
+         margin-left: 5em;
+
+    }
+    footer div.footer .svg{
+        display: none;
+    }
+
+    header  div.header .title1 span{
+        display: none;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .block-1 {
+        display: none;
+    }
+   
+
+    div.header .title1 {
+        float: none;
+        display: block;
+        text-align: center;
+        padding-right: 35px;
+    }
+
+    div.header .title2 {
+        display: inline-block;
+ }
+
+
+    .block-2 {
+        margin: 80px 50px 50px 80px;
+    }
+
+    .block-2 img {
+        float: none;
+        width: 300px;
+        margin: 8px 5px 5px 8px;
+    }
+
+    div.block-2 td {
+        font-size: 1.5em;
+    }
+}
