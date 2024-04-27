@@ -5,44 +5,44 @@
          margin-left: 5em;
 
     }
-    footer div.footer .svg{
+    footer div.footer .svg-footer{
         display: none;
     }
 
-    header  div.header .title1 span{
+    header  div.header .logo-title-left span{
         display: none;
     }
 }
 
 @media screen and (max-width:900px) {
-    .block-1 {
+    .video-block {
         display: none;
     }
    
 
-    div.header .title1 {
+    div.header .logo-title-left {
         float: none;
         display: block;
         text-align: center;
         padding-right: 35px;
     }
 
-    div.header .title2 {
+    div.header .logo-title-right {
         display: inline-block;
  }
 
 
-    .block-2 {
+    .vide-block {
         margin: 80px 50px 50px 80px;
     }
 
-    .block-2 img {
+    .vide-block img {
         float: none;
         width: 300px;
         margin: 8px 5px 5px 8px;
     }
 
-    div.block-2 td {
+    div.vide-block td {
         font-size: 1.5em;
     }
 }

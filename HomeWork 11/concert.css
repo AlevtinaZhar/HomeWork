@@ -21,7 +21,7 @@ body {
     top: 0em;
 }
 
-.title2 a {
+.logo-title-right a {
     float: right;
     text-decoration: none;
     padding-right: 35px;
@@ -29,7 +29,7 @@ body {
     font-size: 1em;
 }
 
-.title1 {
+.logo-title-left {
     float: left;
 }
 
@@ -38,11 +38,13 @@ body {
     padding: 15px;
 }
 
-footer .svg {
+footer .svg-footer {
     float: left;
     width: 3em;
     margin-left: 3em;
+    fill: white;
 }
+
 .footer ul {
     float: right;
     font-size: 0.9em;
@@ -55,24 +57,27 @@ footer .svg {
     list-style-type: none;
 }
 
-.svg {
+.svg-title {
     width: 2em;
     fill: white;
     vertical-align: middle;
 }
 
-.block-1 {
+.video-block {
     margin-top: 80px;
     text-align: center;
 }
 
-.block-2 {
+.info-block {
     margin-bottom: 80px;
-    margin-left: 50px;
+}
+
+.info-block table {
+    margin: 0 auto;
 
 }
 
-.block-2 td {
+.info-block td {
     background-color: rgb(182, 182, 182);
     width: 1220px;
     border-radius: 15px;
@@ -82,12 +87,6 @@ footer .svg {
     padding-right: 10px;
 }
 
-img {
-    float: left;
-    margin: 0 0 0 20px;
-    width: 250px;
-}
-
 .info {
     font-size: 0.5em;
     margin: 20px;
@@ -95,4 +94,10 @@ img {
 
 .info span {
     padding-right: 40px;
+}
+
+img {
+    float: left;
+    margin: 0 0 0 20px;
+    width: 250px;
 }
