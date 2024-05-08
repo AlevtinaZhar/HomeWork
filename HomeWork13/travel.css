@@ -1,0 +1,57 @@
+@import url(travel-media.css);
+@import url(travel-id.css);
+@import url(travel-animation.css);
+
+
+body {
+  margin: 0;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "cont cont cont"
+    "footer footer footer";
+  grid-template-rows: 150px 1fr 60px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-gap: 10px;
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.country {
+  display: grid;
+  grid-template-areas:
+    "spain bali bali"
+    "spain czech italy "
+    "spain egypt turkey ";
+  grid-template-columns: 40% 1fr 30%;
+  grid-template-rows: 30% 1fr;
+  grid-gap: 10px;
+  margin: 5px;
+
+}
+
+header,
+footer {
+  background-color: rgb(85, 144, 255);
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive; 
+  font-size: 2.5em;
+  margin: 0;
+  color: #fffeeb;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 3px 3px 20px #ff99cc,
+    -2px 1px 30px #99f0ff;
+}

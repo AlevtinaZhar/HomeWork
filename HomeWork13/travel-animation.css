@@ -1,0 +1,15 @@
+@keyframes animation {
+    from {
+        left: 0px;
+    }
+    to {
+        left: calc(100% - 50px);
+    }
+}
+.animation {
+    animation: animation 20s infinite;
+    transform: rotate(90deg);
+    position: relative;
+    width: 50px;
+    height: 40px;
+}

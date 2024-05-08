@@ -1,0 +1,37 @@
+#pageHeader {
+    grid-area: header;
+  }
+  
+  #content {
+    grid-area: cont;
+  }
+  
+  #pageFooter {
+    grid-area: footer;
+  }
+  
+#spain {
+  grid-area: spain;
+
+}
+
+#bali {
+  grid-area: bali;
+}
+
+#egypt {
+  grid-area: egypt;
+
+}
+
+#czech {
+  grid-area: czech;
+}
+
+#italy {
+  grid-area: italy;
+}
+
+#turkey {
+  grid-area: turkey;
+}
