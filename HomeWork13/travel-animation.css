@@ -2,10 +2,12 @@
     from {
         left: 0px;
     }
+
     to {
-        left: calc(100% - 50px);
+        left: 100%;
     }
 }
+
 .animation {
     animation: animation 20s infinite;
     transform: rotate(90deg);
