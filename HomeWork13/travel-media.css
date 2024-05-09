@@ -1,0 +1,20 @@
+@media screen and (max-width:900px) {
+    div.country {
+        display: grid;
+        grid-template-areas:
+            "spain spain spain"
+            "bali bali bali"
+            "czech czech czech"
+            "italy italy italy"
+            "egypt egypt egypt"
+            "turkey turkey turkey";
+        grid-template-rows: repeat(6, 300px);
+    }
+div.block-menu {
+    display: none;
+}
+.name {
+    font-size: 2em;;
+}
+
+}
