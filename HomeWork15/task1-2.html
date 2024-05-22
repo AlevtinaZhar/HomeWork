@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Задание 1. Перепишите следующий код через switch-case
+    let lang = 'ru';
+    switch (lang) {
+        case 'ru': {
+            console.log('рус');
+        }
+            break;
+
+        case 'en': {
+            console.log('анг');
+        }
+            break;
+
+        case 'de': {
+            console.log('нем');
+        }
+            break;
+
+        case '': {
+            console.log('язык не поддерживается');
+        }
+            break;
+
+    }
+
+
+    // Задание 2.Попросить пользователя ввести день недели. Он должен вводить до тех пор пока не введет одно число от 1 до 7.  
+    // Затем в alert вывести текст, соответствующий дням недели:
+
+    do {
+        var value = parseInt(prompt("Введите день недели:"));
+    }
+    while ((value > 7)||(value < 1));
+    switch (value) {
+        case 1:
+            alert(`Начало рабочей недели!`);
+            break;
+        case 2:
+        case 3:
+        case 4:
+            alert(`Обычный день`);
+            break;
+        case 5:
+            alert(`Конец рабочей недели!`);
+            break;
+        case 6:
+        case 7:
+            alert(`Выходной!`);
+            break;
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

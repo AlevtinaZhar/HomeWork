@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let genre = Number(prompt('Какой жанр предпочитаете? 1 - Роман, 2 -Детектив, 3 -  Фентези'));
+    let lit = confirm('Предпочитаете современную литературу? ОК(да)/Отмена(нет))');
+    let author = confirm('Хотели бы книгу русского автора? ОК(да)/Отмена(нет))');
+
+    if ((genre == 1) && (lit == false) && (author == true)) { book = `Война и мир` }
+    else if ((genre === 3) && (lit === true) && (author === true)) { book = `Ночной дозор` }
+    else if ((genre === 3) && (lit === true) && (author === false)) { book = `Гарри Поттер` }
+    else if ((genre === 2) && (lit === false) && (author === false)) { book = `Шерлок Холмс` }
+    else if ((genre === 2) && (lit === true) && (author === false)) { book = `Девушка в поезде` }
+    else if (((genre === 1) && (lit === true) || (author === false))
+        || ((genre === 3) && (lit === false))
+        || (genre == 2) && (author == true)) { alert(`К сожалению, не смогли подобрать вам книгу`) }
+
+    alert(`Предлагаем вам почитать - ${book}`)
+
+</script>
+
+<body>
+
+</body>
+
+</html>

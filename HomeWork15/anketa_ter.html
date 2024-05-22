@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let name = (prompt(`Введите ваше имя:`));
+    let patronymic = (prompt(`Введите ваше отчество:`));
+    let surname = (prompt(`Введите вашу фамилию:`));
+    let ageQuest = parseInt(prompt(`Введите ваш возраст:`));
+    let gender = confirm(`Ваш пол-мужской?`);
+
+    let age = 2024 - ageQuest;
+    let ageInDay = 365 * age;
+    let age5year = ageQuest + 5;
+
+    (gender == true) ? gender = "мужской " : gender = "женский ";
+    (gender == true && ageQuest <= 60) ? pens = "нет" : pens = "да";
+    (gender != true && ageQuest <= 55) ? pens = "нет" : pens = "да";
+
+    alert(
+    `ФИО:  ${name} ${patronymic} ${surname}
+    ваш возраст в годах: ${ageQuest} 
+    ваш возраст в днях: ${ageInDay}
+    через 5 лет вам будет: ${age5year}
+    ваш пол: ${gender}
+    вы на пенсии: ${pens}`
+    );
+
+</script>
+
+<body>
+
+</body>
+
+</html>
