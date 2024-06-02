@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Десять раз попросите пользователя ввести данные массива (любые типы могут быть). 
+    // Найдите сумму всех элементов-чисел.
+    let arr = [];
+// цикл на длину массива
+    do {
+        let elementToArray = dataChecking();
+        arr.push(elementToArray);
+    }
+    while (arr.length != 10);
+
+// суммирование элементов массива
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    console.log('Сумма массива:' + sum)
+
+// проверка данных
+    function dataChecking() {
+        let num = prompt('Введите число:');
+        if (isNaN(num)) return 0;
+        else return parseInt(num);
+    }
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

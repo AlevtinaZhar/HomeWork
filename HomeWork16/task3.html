@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let fruit = [
+        {
+            name: 'яблоко',
+            price: 3.5,
+            count: 10
+        },
+        {
+            name: 'апельсин',
+            price: 6,
+            count: 14
+        },
+        {
+            name: 'банан',
+            price: 5.1,
+            count: 2
+        },
+        {
+            name: 'мандарин',
+            price: 5.9,
+            count: 9
+        },
+        {
+            name: 'груша',
+            price: 1.3,
+            count: 5
+        }
+    ];
+
+
+    // Показывает все названия товаров с ценой
+    function productNamesPrices() {
+        for (let i = 0; i < fruit.length; i++) {
+            console.log(fruit[i]['name'] + ": " + fruit[i]['price'] + " за кг");
+        }
+    }
+
+
+    // Пользователь передает название товара, 
+    // а в ответ получает его цену в виде сообщения
+
+    // получаем название товара 
+    function getName() {
+        let nameProduct;
+        do {
+            nameProduct = prompt("Введите название товара");
+            if (nameProduct == null || nameProduct == "") {
+                alert("Вы ничего не ввели!");
+            }
+        } while (nameProduct == null || nameProduct == '');
+        return nameProduct;
+    }
+
+    // сравниваем название с объектом в массиве
+    function pricesProduct() {
+        let nameProduct = getName();
+        for (let i = 0; i < fruit.length; i++) {
+            if (fruit[i].name == nameProduct) {
+                console.log("Стоимость товара " + nameProduct + " - " + fruit[i].price)
+                break;
+            }
+            else {
+                console.log("Данные не найдены")
+                continue;
+            }
+        }
+    }
+
+    // Спрашивает сколько денег у пользователя и отвечает 
+    // сколько кг одного товара он может купить за эту сумму.
+
+    function checkАmount() {
+        // взяла из object.html :)
+        let money;
+        do {
+            if (money == null || money == "") {
+                alert("Вы ничего не ввели!");
+            } else if (isNaN(money)) {
+                alert("Вы ввели не число!");
+            } else if (parseInt(money) <= 0) {
+                alert("Нужно ввести положительное число!");
+            } else if (parseInt(money) != parseFloat(money)) {
+                alert("Нужно ввести целое число!");
+            } else {
+                money = parseInt(money);
+            }
+        } while (money !== parseInt(money));
+        return money;
+    }
+
+
+    function getАmount() {
+        return money = prompt("Введите имеющуюся сумму денег");
+    }
+
+    
+
+
+</script>
+
+<body>
+    <button onclick="productNamesPrices()">Показывать все названия товаров с ценой</button>
+    <button onclick="pricesProduct()"> Узнать стоимость товара</button>
+    <button onclick="">Имеющаяся сумма</button>
+</body>
+
+</html>

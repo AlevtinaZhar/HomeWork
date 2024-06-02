@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 2. Написать функцию со вспомогательными функциями, которая просит ввести 
+    // пользователя размеры массива (пример 2x2, 2x3, 3x4, 5x5). 
+    // И затем  сама заполняет его числами по порядку, пока не заполнится массив. (1, 2, 3, ...)
+
+
+    function userSizing() {
+        return sizeOfUser = prompt('Введите размеры массива (пример 2x2, 2x3, 3x4, 5x5)');
+
+    }
+
+
+    function fillingTheArray() {
+        let array = []
+        let size = userSizing();
+        switch (sizeOfUser) {
+            case '2x2': {
+                for (let i = 1; i <= 4; i++) {
+                    array.push(i);
+                }
+            }
+                return array;
+                break;
+            case '2x3': {
+                for (let i = 1; i <= 6; i++) {
+                    array.push(i);
+                }
+            }
+                return array;
+                break;
+            case '3x4': {
+                for (let i = 1; i <= 12; i++) {
+                    array.push(i);
+                }
+            }
+                return array;
+                break;
+            case '5x5': {
+                for (let i = 1; i <= 25; i++) {
+                    array.push(i);
+                }
+            }
+                return array;
+                break;
+            default: {
+                console.log('Вы ввели не те данные')
+
+            }
+                return array;
+        }
+    }
+
+    console.log(fillingTheArray());
+</script>
+
+<body>
+
+</body>
+
+</html>

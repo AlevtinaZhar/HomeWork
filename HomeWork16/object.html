@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getName() {
+      let name;
+      do {
+        name = prompt("Введите имя пользователя");
+        if (name == null || name == "") {
+          alert("Вы ничего не ввели!");
+        }
+      } while (name == null || name == '');
+      return name;
+    }
+
+    function getData(lesson) {
+      let size;
+      //проверяем число на валидность
+      do {
+        // проверяем тип вводимых значений: оценки, либо занятия.
+        size = lesson ? getMark(lesson) : getLessons();
+        if (size == null || size == "") {
+          alert("Вы ничего не ввели!");
+        } else if (isNaN(size)) {
+          alert("Вы ввели не число!");
+        } else if (parseInt(size) <= 0) {
+          alert("Нужно ввести положительное число!");
+        } else if (parseInt(size) != parseFloat(size)) {
+          alert("Нужно ввести целое число!");
+        } else {
+          size = parseInt(size);
+        }
+      } while (size !== parseInt(size));
+      return size;
+    }
+
+    function getLessons() {
+      return size = prompt("Введите количество занятий");
+    }
+
+    function getMark(lesson) {
+      return size = prompt("Введите оценку за занятие " + lesson);
+    }
+
+    function createUserObject(name, lessons) {
+      window.lessonObject = {};
+      for (let i = 1; i <= lessons; i++) {
+        // вызываем getData c параметром, в котором прописан конкретный lesson
+        // таким образом получаем оценку за конкретное занятие и кладем в обьект
+        lessonObject[i] = getData(i);
+      }
+      let user = {
+        name: name,
+        lessons: lessonObject
+      }
+      return user;
+    }
+
+    function result() {
+
+      let name = getName();
+      window.lessons = getData();  // вызываем getData без параметра - это будет значить, что получаем кол-во занятий
+      let obj = createUserObject(name, lessons);
+      console.log(obj)
+    }
+
+    // сделала переменные (lessonObject,lessons и gpa) глобальными,
+    // чтобы использовать их в других функциях
+
+    function sumMark() {
+      let sum = 0;
+      for (key in lessonObject) {
+        if (typeof lessonObject[key] == 'number') {
+          sum += lessonObject[key];
+        }
+      }
+      return sum;
+    }
+
+    function GPA() {
+      window.gpa = sumMark() / lessons;
+      console.log('Средний балл:' + gpa.toFixed(1));
+    }
+
+    function GPAСheck() {
+      if (gpa >= 7.5) {
+        console.log('Баллов достаточно для прохождения на следующий курс');
+      }
+      else {
+        console.log('Вам не хватает:' + (7.5 - gpa).toFixed(1));
+      }
+    }
+
+
+  </script>
+  <button onclick="result()"> Создаем обьект с оценками</button>
+  <button onclick="GPA()"> Подсчитываем средний балл</button>
+  <button onclick="GPAСheck()"> Прохожу на проф курс? </button>
+</body>
+
+</html>
