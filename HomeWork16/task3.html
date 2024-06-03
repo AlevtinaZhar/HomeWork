@@ -78,8 +78,9 @@
 
     function checkАmount() {
         // взяла из object.html :)
-        window.money;
+        let money;
         do {
+            money = getАmount();
             if (money == null || money == "") {
                 alert("Вы ничего не ввели!");
             } else if (isNaN(money)) {
@@ -87,9 +88,9 @@
             } else if (parseInt(money) <= 0) {
                 alert("Нужно ввести положительное число!");
             } else {
-                money = parseInt(money);
+                money = Number(money);
             }
-        } while (money !== parseInt(money));
+        } while (money !== Number(money));
         return money;
     }
 
@@ -97,24 +98,49 @@
     function getАmount() {
         return money = prompt("Введите имеющуюся сумму денег");
     }
-    function calculationFruit() {
-        let money = getАmount();
-        let product = [];
+
+    // Функция рассчитывает сколько и чего может купить пользователь
+    function calculationOfPossiblePurchases() {
+        let money = checkАmount();
+        let possiblePurchases = [];
         for (let i = 0; i < fruit.length; i++) {
             if (money >= fruit[i].price) {
-                product.push(Math.floor(money / fruit[i].price) + " кг " + fruit[i].name)
+                possiblePurchases.push(Math.floor(money / fruit[i].price));
+                continue;
+            }
+            else {
+                possiblePurchases.push(0);
+                continue;
+            }
+        }
+        return possiblePurchases;
+    }
+
+    // Функция сравнивает количество товара с тем, сколько пользователь может купить 
+    function calculation() {
+        let possiblePurchases = calculationOfPossiblePurchases();
+        let purchases = [];
+        for (let i = 0; i < fruit.length; i++) {
+            if (possiblePurchases[i] >= fruit[i].count) {
+                purchases.push(fruit[i].count + " кг " + fruit[i].name)
+                continue;
+            }
+            else if (possiblePurchases[i] <= fruit[i].count && possiblePurchases[i] != 0) {
+                purchases.push(possiblePurchases[i] + " кг " + fruit[i].name)
                 continue;
             }
             else {
                 continue;
             }
         }
-        return product;
+        return purchases;
+
     }
 
+
     function product() {
-        let product = calculationFruit();
-        console.log("Вы можете купить: " + product)
+        let purchases = calculation();
+        console.log("Вы можете купить:" + purchases)
     }
 
 
