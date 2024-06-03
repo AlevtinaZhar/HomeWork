@@ -68,7 +68,6 @@
                 break;
             }
             else {
-                console.log("Данные не найдены")
                 continue;
             }
         }
@@ -79,7 +78,7 @@
 
     function checkАmount() {
         // взяла из object.html :)
-        let money;
+        window.money;
         do {
             if (money == null || money == "") {
                 alert("Вы ничего не ввели!");
@@ -87,8 +86,6 @@
                 alert("Вы ввели не число!");
             } else if (parseInt(money) <= 0) {
                 alert("Нужно ввести положительное число!");
-            } else if (parseInt(money) != parseFloat(money)) {
-                alert("Нужно ввести целое число!");
             } else {
                 money = parseInt(money);
             }
@@ -100,8 +97,25 @@
     function getАmount() {
         return money = prompt("Введите имеющуюся сумму денег");
     }
+    function calculationFruit() {
+        let money = getАmount();
+        let product = [];
+        for (let i = 0; i < fruit.length; i++) {
+            if (money >= fruit[i].price) {
+                product.push(Math.floor(money / fruit[i].price) + " кг " + fruit[i].name)
+                continue;
+            }
+            else {
+                continue;
+            }
+        }
+        return product;
+    }
 
-    
+    function product() {
+        let product = calculationFruit();
+        console.log("Вы можете купить: " + product)
+    }
 
 
 </script>
@@ -109,7 +123,7 @@
 <body>
     <button onclick="productNamesPrices()">Показывать все названия товаров с ценой</button>
     <button onclick="pricesProduct()"> Узнать стоимость товара</button>
-    <button onclick="">Имеющаяся сумма</button>
+    <button onclick="product()">Имеющаяся сумма</button>
 </body>
 
 </html>
