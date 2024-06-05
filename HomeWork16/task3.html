@@ -59,12 +59,12 @@
         return nameProduct;
     }
 
-    // сравниваем название с объектом в массиве
-    function pricesProduct() {
+    // проверяем есть ли такой товар (проверяем вводимые слова)
+    function checkNameProduct() {
         let nameProduct = getName();
         for (let i = 0; i < fruit.length; i++) {
             if (fruit[i].name == nameProduct) {
-                console.log("Стоимость товара " + nameProduct + " - " + fruit[i].price)
+                return nameProduct;
                 break;
             }
             else {
@@ -72,6 +72,24 @@
             }
         }
     }
+
+    // находим стоимость по названию и 
+    // выводим "товар не найден" если предыдущая функция передала null
+
+    function pricesProduct() {
+        let nameProduct = checkNameProduct();
+        for (let i = 0; i < fruit.length; i++) {
+            if (nameProduct != null) {
+                console.log("Стоимость товара: " + nameProduct + " - " + fruit[i].price)
+                break;
+            }
+            else {
+                alert("Товар не найден")
+                break;
+            }
+        }
+    }
+
 
     // Спрашивает сколько денег у пользователя и отвечает 
     // сколько кг одного товара он может купить за эту сумму.

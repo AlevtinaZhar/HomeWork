@@ -9,6 +9,12 @@
 
 <body>
   <script>
+
+    let lessons;
+    let lessonObject = {};
+    let gpa;
+
+
     function getName() {
       let name;
       do {
@@ -50,7 +56,7 @@
     }
 
     function createUserObject(name, lessons) {
-      window.lessonObject = {};
+      lessonObject = {};
       for (let i = 1; i <= lessons; i++) {
         // вызываем getData c параметром, в котором прописан конкретный lesson
         // таким образом получаем оценку за конкретное занятие и кладем в обьект
@@ -61,19 +67,16 @@
         lessons: lessonObject
       }
       return user;
+      return lessonObject;
     }
 
     function result() {
 
       let name = getName();
-      window.lessons = getData();  // вызываем getData без параметра - это будет значить, что получаем кол-во занятий
+      lessons = getData();  // вызываем getData без параметра - это будет значить, что получаем кол-во занятий
       let obj = createUserObject(name, lessons);
       console.log(obj)
     }
-
-    // сделала переменные (lessonObject,lessons и gpa) глобальными,
-    // чтобы использовать их в других функциях
-
     function sumMark() {
       let sum = 0;
       for (key in lessonObject) {
@@ -85,8 +88,9 @@
     }
 
     function GPA() {
-      window.gpa = sumMark() / lessons;
+      gpa = sumMark() / lessons;
       console.log('Средний балл:' + gpa.toFixed(1));
+      return gpa;
     }
 
     function GPAСheck() {

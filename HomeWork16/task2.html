@@ -11,54 +11,70 @@
     // пользователя размеры массива (пример 2x2, 2x3, 3x4, 5x5). 
     // И затем  сама заполняет его числами по порядку, пока не заполнится массив. (1, 2, 3, ...)
 
+    let array = [];
 
     function userSizing() {
-        return sizeOfUser = prompt('Введите размеры массива (пример 2x2, 2x3, 3x4, 5x5)');
+        return sizeOfUser = prompt('Введите длину массива:');
 
+    }
+    function userLenghtFunc() {
+        return lenghtOfUser = prompt('Введите ширину массива:');
+
+    }
+
+    // проверка sizeOfUser
+    function checkSize() {
+        let sizeOfUser;
+        do {
+            sizeOfUser = userSizing();
+            if (sizeOfUser == null || sizeOfUser == "") {
+                alert("Вы ничего не ввели!");
+            } else if (isNaN(sizeOfUser)) {
+                alert("Вы ввели не число!");
+            } else if (parseInt(sizeOfUser) <= 0) {
+                alert("Нужно ввести положительное число!");
+            }
+            else {
+                sizeOfUser = Number(sizeOfUser);
+            }
+        } while (sizeOfUser !== Number(sizeOfUser));
+        return sizeOfUser;
+    }
+
+    // проверка  userLenght
+    function checkLenght() {
+        let userLenght;
+        do {
+            userLenght = userLenghtFunc();
+            if (userLenght == null || userLenght == "") {
+                alert("Вы ничего не ввели!");
+            } else if (isNaN(userLenght)) {
+                alert("Вы ввели не число!");
+            } else if (parseInt(userLenght) <= 0) {
+                alert("Нужно ввести положительное число!");
+            }
+            else {
+                userLenght = Number(userLenght);
+            }
+        } while (userLenght !== Number(userLenght));
+        return userLenght;
     }
 
 
     function fillingTheArray() {
-        let array = []
-        let size = userSizing();
-        switch (sizeOfUser) {
-            case '2x2': {
-                for (let i = 1; i <= 4; i++) {
-                    array.push(i);
-                }
-            }
-                return array;
-                break;
-            case '2x3': {
-                for (let i = 1; i <= 6; i++) {
-                    array.push(i);
-                }
-            }
-                return array;
-                break;
-            case '3x4': {
-                for (let i = 1; i <= 12; i++) {
-                    array.push(i);
-                }
-            }
-                return array;
-                break;
-            case '5x5': {
-                for (let i = 1; i <= 25; i++) {
-                    array.push(i);
-                }
-            }
-                return array;
-                break;
-            default: {
-                console.log('Вы ввели не те данные')
+        let userLenght = checkLenght();
+        let sizeOfUse = checkSize();
+        for (let i = 0, k = 1; i < userLenght; i++) {
+            array[i] = [];
 
+            for (let j = 0; j < sizeOfUse; j++) {
+                array[i].push(k++);
             }
-                return array;
         }
+        return array;
     }
 
-    console.log(fillingTheArray());
+    console.log(fillingTheArray(array));
 </script>
 
 <body>

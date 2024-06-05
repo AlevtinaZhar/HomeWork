@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Попросить пользователя  ввести размеры матрицы NxN и значения ячеек (целые числа, сделать проверку)
+
+    let matrix = [];
+    let line;
+    let width;
+
+    function getWidth() {
+        let width = userWidth();
+        do {
+            if (width == null || width == "") {
+                alert("Вы ничего не ввели!");
+            } else if (isNaN(width)) {
+                alert("Вы ввели не число!");
+            } else if (parseInt(width) <= 0) {
+                alert("Нужно ввести положительное число!");
+            } else if (parseInt(width) != parseFloat(width)) {
+                alert("Нужно ввести целое число!");
+            } else {
+                width = parseInt(width);
+            }
+        } while (width !== parseInt(width));
+        return width;
+    }
+
+    function getLenght() {
+        let line = userLenght();
+        do {
+            if (line == null || line == "") {
+                alert("Вы ничего не ввели!");
+            } else if (isNaN(line)) {
+                alert("Вы ввели не число!");
+            } else if (parseInt(line) <= 0) {
+                alert("Нужно ввести положительное число!");
+            } else if (parseInt(line) != parseFloat(line)) {
+                alert("Нужно ввести целое число!");
+            } else {
+                line = parseInt(line);
+            }
+        } while (line !== parseInt(line));
+        return line;
+    }
+    // проверка вводимых значений для матрицы
+    function getNum() {
+        let num;
+        do {
+            num = prompt('Введите значение ячейки:');
+            if (num == null || num == "") {
+                alert("Вы ничего не ввели!");
+            } else if (isNaN(num)) {
+                alert("Вы ввели не число!");
+            } else if (parseInt(num) <= 0) {
+                alert("Нужно ввести положительное число!");
+            }
+            else {
+                num = Number(num);
+            }
+        } while (num !== Number(num));
+        return num;
+    }
+
+    function userWidth() {
+        return width = prompt('Введите количество столбцов:');
+
+    }
+
+    function userLenght() {
+        return line = prompt('Введите количество строк:');
+    }
+
+    // заполняем числами матрицу
+    function fillingTheМatrix() {
+        let width = getWidth();
+        let line = getLenght();
+        matrix;
+        for (let i = 0; i < line; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < width; j++) {
+                matrix[i][j] = getNum();
+            }
+        }
+        return matrix;
+
+    }
+    console.log(fillingTheМatrix(matrix));
+
+    // сумму строк
+    function sumRows() {
+        for (let i = 0; i < matrix.length; i++) {
+            let sum = 0;
+            for (let j = 0; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
+            }
+            console.log("Сумма " + [i] + " строки: " + sum)
+        }
+    }
+
+    // сумма диагоналей
+    function calculateDiagonalSum() {
+        let mainSum = 0;
+        let secondarySum = 0;
+
+        for (let i = 0; i < matrix.length; i++) {
+            for (let j = 0; j < matrix.length; j++) {
+                if (i === j) {
+                    mainSum += matrix[i][j];
+                }
+                if (i + j === matrix.length - 1) {
+                    secondarySum += matrix[i][j];
+                }
+            }
+        }
+        console.log("Сумма основной диагонали:" + mainSum + " \nСумма побочной диагонали:" + secondarySum)
+        return {
+            mainSum,
+            secondarySum
+        }
+    };
+</script>
+
+<body>
+    <button onclick="sumRows()">Посчитать сумму строк</button>
+    <button onclick="calculateDiagonalSum()">Сумма элементов главной и побочной диагонали </button>
+</body>
+
+</html>
