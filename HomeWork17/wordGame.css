@@ -1,0 +1,31 @@
+#input-form,
+#buttonNewStart,
+#buttonStart {
+    border: 1;
+    border-color: #000000;
+    border-radius: 5px;
+    color: #2c2e4e;
+    font-size: 40px;
+    text-align: center;
+    width: 15em;
+    margin-bottom: 50px;
+    font-family: 'Verdana'
+
+}
+
+#input-form,
+#buttonNewStart {
+    display: none;
+}
+
+#text-input {
+    font-size: 30px;
+    width: 15em;
+    border-radius: 5px;
+
+}
+
+.error {
+    color: red;
+    font-size: 20px;
+}

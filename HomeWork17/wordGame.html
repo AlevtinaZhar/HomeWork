@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wordGame.css">
+</head>
+
+<body>
+    <div class="buttonStart">
+        <button type="button" id="buttonStart" onclick="buttonStart()">Начать игру</button>
+    </div>
+
+    <div id="input-form">
+        <label>
+            Введите слово
+        </label>
+        <div class="input-group" style="flex-grow: 2;">
+            <input  type="text" id="text-input">
+            <div id="error"></div>
+
+        </div>
+    </div>
+
+
+    <div class="buttonNewStart">
+        <button type="button" id="buttonNewStart" onclick="buttonNewStart()">Начать заново</button>
+    </div>
+
+</body>
+<script src="code.js"></script>
+
+</html>
